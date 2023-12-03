@@ -17,18 +17,18 @@ public class GroceryStore {
     private void loadInventoryFromFile(String fileName) throws FileNotFoundException {
         File inFile = new File(fileName);
         Scanner input = new Scanner(inFile);
-        //water,5.5,100
+       
         while (input.hasNextLine()) {
             String line = input.nextLine();
             String[] tokens = line.split(",");
-            //string double int
+          
             String name = tokens[0];
             double price = Double.valueOf(tokens[1]);
             int inventoryLevel = Integer.valueOf(tokens[2]);
 
             Product newProduct = new Product(name, price, inventoryLevel);
 
-            //if it already exists then just update the inventory level
+           
             if (productList.contains(newProduct)) {
                 Product oldProduct = findProduct(name);
                 oldProduct.setInventoryLevel(inventoryLevel);
@@ -43,7 +43,7 @@ public class GroceryStore {
     }
 
     public boolean processSale() {
-        //select items --> add to cart -->check out       
+        
         Scanner input = new Scanner(System.in);
         cart shoppingCart = new cart();
         boolean isCheckout = false;
@@ -77,7 +77,7 @@ public class GroceryStore {
                     } else if (choice == 2) {
                         isCheckout = true;
                     }
-                    //if user chose 1 it will loop back again. 
+                  
                 } catch (InputMismatchException e) {
                     System.out.println("\nPlease enter a correct option (Numbers only)\n");
                 }
@@ -149,8 +149,7 @@ public class GroceryStore {
         return SR.generateSaleReport();
     }
 
-    //------------------------------------------------------- 
-    //helper methods
+    
     public void printStoreProducts() {
         System.out.printf("%-15s%-10s%-10s\n", "Product Name", "Price", "Inventory Level");
         for (Product p : this.productList) {
@@ -159,7 +158,7 @@ public class GroceryStore {
     }
 
     public Product findProduct(String name) {
-        //return  the product if found otherwise return null
+       
         Product p = null;
         for (Product item : this.productList) {
             String productName = item.getName();
@@ -212,7 +211,7 @@ public class GroceryStore {
 
     public void checkout(cart shoppingCart) {
         Scanner input = new Scanner(System.in);
-        //String customerName, Cart cart, double discountRate
+       
         System.out.println("Enter customer name: ");
         String name = input.nextLine();
         System.out.println("Enter discount rate (0 to 100)");
