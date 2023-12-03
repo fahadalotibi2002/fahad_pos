@@ -1,0 +1,6 @@
+Water,1,50
+Tissue,2.39,40
+Orange,4.55,25
+Soft Drink,2.5,100
+Cake,25.99,50
+Mango,20.00,40

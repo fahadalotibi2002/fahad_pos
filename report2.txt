@@ -1,0 +1,9 @@
+=========================[TotalRevenueReport]==========================
+Total revenue generated: 8055.47 SAR
+Total number of sales: 10 sales
+Average sale Amount: 805.55 SAR
+Total number of products listed: 11 Products
+Total Items Sold: 58
+Total Quantity Sold: 1675
+Most popular item is (SALMON) which sold (352)
+=======================================================================

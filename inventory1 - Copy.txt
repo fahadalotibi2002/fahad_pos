@@ -1,0 +1,11 @@
+Bread,2.49,80
+Salmon,10.99,90
+Chicken,8.99,75
+Milk,3.99,100
+Cheese,4.99,25
+Apple,1.99,100
+Beef,12.99,15
+Banana,2.99,75
+Eggs,2.99,50
+Pasta,1.79,30
+Tea,2.79,30

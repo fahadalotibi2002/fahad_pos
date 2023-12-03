@@ -1,0 +1,9 @@
+=========================[TotalRevenueReport]==========================
+Total revenue generated: 386868.13 SAR
+Total number of sales: 500 sales
+Average sale Amount: 773.74 SAR
+Total number of products listed: 11 Products
+Total Items Sold: 2830
+Total Quantity Sold: 89780
+Most popular item is (MILK) which sold (13588)
+=======================================================================
