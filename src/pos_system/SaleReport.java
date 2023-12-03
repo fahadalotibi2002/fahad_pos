@@ -88,7 +88,7 @@ public class SaleReport {
     private List<Sale> generateFakeSales(int n) {
         
         String[] fakeNames = generateFakeNames(n);
-        Cart[] fakeCarts = generateFakeCarts(n);
+        cart[] fakeCarts = generateFakeCarts(n);
         double[] fakeDiscounts = generateFakeDiscounts(n);
 
         for (int i = 0; i < n; i++) {
@@ -99,8 +99,8 @@ public class SaleReport {
         return SalesList;
     }
 
-    private Cart[] generateFakeCarts(int n) {
-        Cart[] fakeCarts = new Cart[n];
+    private cart[] generateFakeCarts(int n) {
+       cart[] fakeCarts = new cart[n];
         for (int i = 0; i < fakeCarts.length; i++) {
             Cart cart = new Cart();
            
@@ -170,19 +170,19 @@ public class SaleReport {
             
             totalRevenue += s.getSalePrice();
             
-            totalItemsSold += s.getCart().getSize();
+            totalItemsSold += s.getcart().getSize();
             
-            for (int i = 0; i < s.getCart().getSize(); i++) {
-                totalQuantitySold += s.getCart().getQuantities()[i];
+            for (int i = 0; i < s.getcart().getSize(); i++) {
+                totalQuantitySold += s.getcart().getQuantities()[i];
             }
         }
         averageSaleAmount = totalRevenue / Sale.getNumSales();
        
         HashMap<String, Integer> productMap = new HashMap<>();
         for (Sale s : saleArray) {
-            for (int i = 0; i < s.getCart().getSize(); i++) {
-                String name = s.getCart().getItems()[i].getName();
-                int newQuantity = s.getCart().getQuantities()[i];
+            for (int i = 0; i < s.getcart().getSize(); i++) {
+                String name = s.getcart().getItems()[i].getName();
+                int newQuantity = s.getcart().getQuantities()[i];
 
                 if (productMap.containsKey(name)) {
                     int oldQuantity = productMap.get(name);
